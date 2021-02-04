@@ -20,13 +20,26 @@ function QuestionWidget({
   const isCorrect = selectedAlternative === question.answer;
   const hasAlternativeSelected = selectedAlternative !== undefined;
 
+  function handleForm() {
+    setIsQuestionSubmited(true);
+    setTimeout(() => {
+      addResult(isCorrect ? countdown / 1000 : 0);
+      onSubmit();
+      setCountdown(60 * 1000);
+      setIsQuestionSubmited(false);
+      setSelectedAlternative(undefined);
+    }, 5 * 1000);
+  }
+
   useEffect(() => {
-    if (!isQuestionSubmited) {
-      setTimeout(() => {
+    setTimeout(() => {
+      if (!isQuestionSubmited && countdown !== 0) {
         const countdownTime = countdown - 1000;
         setCountdown(countdownTime);
-      }, 1000);
-    }
+      } else if (!isQuestionSubmited && countdown === 0) {
+        handleForm();
+      }
+    }, 1000);
   });
 
   return (
@@ -50,16 +63,9 @@ function QuestionWidget({
         <p>{question.description}</p>
 
         <AlternativesForm
-          onSubmit={(infosDoEvento) => {
-            infosDoEvento.preventDefault();
-            setIsQuestionSubmited(true);
-            setTimeout(() => {
-              addResult(isCorrect ? countdown / 1000 : 0);
-              onSubmit();
-              setCountdown(60 * 1000);
-              setIsQuestionSubmited(false);
-              setSelectedAlternative(undefined);
-            }, 5 * 1000);
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleForm();
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
