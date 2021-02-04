@@ -28,7 +28,7 @@ function QuestionWidget({
       setCountdown(60 * 1000);
       setIsQuestionSubmited(false);
       setSelectedAlternative(undefined);
-    }, 5 * 1000);
+    }, 1 * 1000);
   }
 
   useEffect(() => {
@@ -40,7 +40,7 @@ function QuestionWidget({
         handleForm();
       }
     }, 1000);
-  });
+  }, [countdown]);
 
   return (
     <Widget>

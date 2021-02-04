@@ -1,14 +1,31 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import fire from '../../../config/firebase';
 import Widget from '../Widget';
 
-function ResultWidget({ results }) {
+function ResultWidget({ results, gravadoDB, setGravadoDB }) {
+  function gravarPontuacao(nome, pontuacao) {
+    fire.database().ref().push({
+      nome,
+      pontuacao,
+    });
+  }
+
+  const [pontuacao] = useState(results.reduce((result, soma) => result + soma));
+  const [nome] = useState(useRouter().query.name);
+
+  if (!gravadoDB) {
+    gravarPontuacao(nome, pontuacao);
+    setGravadoDB(true);
+  }
+
   return (
     <Widget>
       <Widget.Header>
         Tela de Resultado:
         {' '}
-        {results.reduce((result, soma) => result + soma)}
+        {pontuacao}
         {' '}
         Pontos
       </Widget.Header>

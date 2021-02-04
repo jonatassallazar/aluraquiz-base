@@ -15,6 +15,7 @@ const screenStates = {
 };
 export default function QuizPage({ externalQuestions, externalBg }) {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
+  const [gravadoDB, setGravadoDB] = useState(false);
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const questionIndex = currentQuestion;
@@ -31,6 +32,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
   useEffect(() => {
     setTimeout(() => {
+      setGravadoDB(false);
       setScreenState(screenStates.QUIZ);
     }, 1 * 1000);
   }, []);
@@ -60,7 +62,13 @@ export default function QuizPage({ externalQuestions, externalBg }) {
 
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
-        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
+        {screenState === screenStates.RESULT && (
+        <ResultWidget
+          gravadoDB={gravadoDB}
+          setGravadoDB={setGravadoDB}
+          results={results}
+        />
+        )}
       </QuizContainer>
     </QuizBackground>
   );
