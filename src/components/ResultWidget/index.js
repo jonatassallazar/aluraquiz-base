@@ -1,12 +1,16 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import fire from '../../../config/firebase';
+import fire from '../../../config/db-firebase';
 import Widget from '../Widget';
 
-function ResultWidget({ results, gravadoDB, setGravadoDB }) {
+function ResultWidget({
+  results,
+  gravadoDB,
+  setGravadoDB,
+}) {
   function gravarPontuacao(nome, pontuacao) {
-    fire.database().ref().push({
+    fire.database().ref('leaderboard/').push({
       nome,
       pontuacao,
     });
