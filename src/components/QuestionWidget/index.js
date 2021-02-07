@@ -112,18 +112,7 @@ function QuestionWidget({
               initial="hidden"
               animate="show"
             >
-              <QuizPopUp.Img
-                as={motion.img}
-                initial={{ scale: 0 }}
-                animate={{ rotate: 180, scale: 1 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 260,
-                  damping: 20,
-                }}
-                src="img/correct.svg"
-                alt="Correct"
-              />
+              <QuizPopUp.Img src="img/correct.svg" alt="Correct" />
               <QuizPopUp.P>Você acertou!</QuizPopUp.P>
             </QuizPopUp.Center>
           </QuizPopUp>
@@ -140,18 +129,7 @@ function QuestionWidget({
               initial="hidden"
               animate="show"
             >
-              <QuizPopUp.Img
-                as={motion.img}
-                initial={{ scale: 0 }}
-                animate={{ rotate: 180, scale: 1 }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 260,
-                  damping: 20,
-                }}
-                src="img/wrong.svg"
-                alt="Wrong"
-              />
+              <QuizPopUp.Img src="img/wrong.svg" alt="Wrong" />
               <QuizPopUp.P>Você errou!</QuizPopUp.P>
             </QuizPopUp.Center>
           </QuizPopUp>
