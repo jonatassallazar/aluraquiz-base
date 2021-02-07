@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import fire from '../../../config/db-firebase';
 import Widget from '../Widget';
+import Button from '../Button';
 
 function ResultWidget({
   results,
@@ -57,6 +58,9 @@ function ResultWidget({
             </li>
           ))}
         </ul>
+        <Button.NextLink href="/">
+          Ver Tabela de Pontuação
+        </Button.NextLink>
       </Widget.Content>
     </Widget>
   );

@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
+import { motion } from 'framer-motion';
 import AlternativesForm from '../AlternativesForm';
 import BackLinkArrow from '../BackLinkArrow';
 import Button from '../Button';
 import Widget from '../Widget';
+import QuizPopUp from '../QuizPopUp';
 
 function QuestionWidget({
   question,
@@ -28,7 +30,7 @@ function QuestionWidget({
       setCountdown(60 * 1000);
       setIsQuestionSubmited(false);
       setSelectedAlternative(undefined);
-    }, 1 * 1000);
+    }, 4 * 1000);
   }
 
   useEffect(() => {
@@ -40,7 +42,7 @@ function QuestionWidget({
         handleForm();
       }
     }, 1000);
-  }, [countdown]);
+  });
 
   return (
     <Widget>
@@ -98,8 +100,62 @@ function QuestionWidget({
           <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+          {isQuestionSubmited && isCorrect && (
+          <QuizPopUp>
+            <QuizPopUp.Center
+              as={motion.section}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              variants={{
+                show: { opacity: 1, y: '0' },
+                hidden: { opacity: 0, y: '100%' },
+              }}
+              initial="hidden"
+              animate="show"
+            >
+              <QuizPopUp.Img
+                as={motion.img}
+                initial={{ scale: 0 }}
+                animate={{ rotate: 180, scale: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 260,
+                  damping: 20,
+                }}
+                src="img/correct.svg"
+                alt="Correct"
+              />
+              <QuizPopUp.P>Você acertou!</QuizPopUp.P>
+            </QuizPopUp.Center>
+          </QuizPopUp>
+          )}
+          {isQuestionSubmited && !isCorrect && (
+          <QuizPopUp>
+            <QuizPopUp.Center
+              as={motion.section}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              variants={{
+                show: { opacity: 1, y: '0' },
+                hidden: { opacity: 0, y: '100%' },
+              }}
+              initial="hidden"
+              animate="show"
+            >
+              <QuizPopUp.Img
+                as={motion.img}
+                initial={{ scale: 0 }}
+                animate={{ rotate: 180, scale: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 260,
+                  damping: 20,
+                }}
+                src="img/wrong.svg"
+                alt="Wrong"
+              />
+              <QuizPopUp.P>Você errou!</QuizPopUp.P>
+            </QuizPopUp.Center>
+          </QuizPopUp>
+          )}
         </AlternativesForm>
       </Widget.Content>
     </Widget>

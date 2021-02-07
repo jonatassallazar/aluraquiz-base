@@ -1,45 +1,136 @@
 {
-  "bg": "https://www.hitalent.co/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmJDQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1452099b706ad7d079f7a3a4dd5d702ebeeae45f/HiTalent.png",
-  "title": "Quiz JavaScript #AluraQuiz",
-  "description": "Um quiz rápido sobre o mundo do JavaScript",
+  "bg": "https://images6.alphacoders.com/321/thumb-1920-321927.jpg",
+  "title": "Quiz BreakinBad #AluraQuiz",
+  "description": "Exiba seu conhecimento em Breaking Bad [Pode conter spoilers]",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
-      "title": "Qual a diferença entre = , == e === ?",
-      "description": "Pergunta fácil em!",
-      "answer": 1,
+      "image": "https://media.giphy.com/media/3oFzmkkwfOGlzZ0gxi/giphy.gif",
+      "title": "Qual é o alias utilizado por Walter White no mundo do crime?",
+      "description": "Começamos fácil hein!?",
+      "answer": 2,
       "alternatives": [
-        "São a mesma coisa",
-        "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável."
+        "Rutherford",
+        "Bohr",
+        "Heisenberg",
+        "Einstein",
+        "Nenhuma das alternativas"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/Ie2Hs3A0uJRtK/giphy.gif",
-      "title": "Que tipos de dados são suportados em JavaScript?",
-      "description": "E agora? Você sabe?",
+      "image": "https://media.giphy.com/media/yE72eDy7lj3JS/giphy.gif",
+      "title": "Na 1ª temporada, Jesse Pinkman utilizava um elemento diferencial em sua receita própria de metanfetamina, qual era o igrediente secreto?",
+      "description": "Ainda tá facil vai!",
+      "answer": 3,
+      "alternatives": [
+        "Cominho",
+        "Pimenta",
+        "Páprica",
+        "Chilli em pó",
+        "Canela"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/d3MMcCKoCmPN9yve/giphy.gif",
+      "title": "Qual o nome do tio de Tuco e famoso ex-traficante de drogas",
+      "description": "Lembra?",
       "answer": 0,
       "alternatives": [
-        "Number, String, Undefined, Null e Bool.",
-        "Int, String, Undefined, Null e Bool."
+        "Hector Salamanca",
+        "Joaquín Guzmán",
+        "Júlio Salamanca",
+        "Steven Gomez",
+        "Tortuga"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a diferença de window e global?",
+      "image": "https://media.giphy.com/media/Ut6Xbl4kfDcWc/giphy.gif",
+      "title": "Quanto que Walter White deu em dinheiro para Jesse Pikman comprar o trailer?",
+      "description": "Vou começar a pegar pesado hein",
       "answer": 1,
       "alternatives": [
-        "São a mesma coisa",
-        "window é o escopo global no browser, e global no node"
+        "$5.000",
+        "$7.000",
+        "$9.000",
+        "$15.000",
+        "$75.000"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a forma antiga de trabalhar com AJAX na Web?",
+      "image": "https://media.giphy.com/media/YGM7LAVd2Oqmk/giphy.gif",
+      "title": "Quantos episódios tem Breaking Bad no total?",
+      "description": "Vixe!",
+      "answer": 2,
+      "alternatives": [
+        "55",
+        "36",
+        "62",
+        "70",
+        "45"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/Y48mHlN6MOX2gwBNN4/giphy.gif",
+      "title": "Qual os nomes dos Primos Salamancas?",
+      "description": "Ops...",
+      "answer": 3,
+      "alternatives": [
+        "Júlio e Tuco",
+        "Hector e Gonzales",
+        "Daniel e Luis",
+        "Leonel e Marco",
+        "Nenhuma das Alternativas"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/yDChhXhGE6Ma4/giphy.gif",
+      "title": "Qual o link do site que Walter Jr. criou para arrecadar dinheiro para o tratamento de câncer de Walter White?",
+      "description": "Tranquilo vai...",
+      "answer": 4,
+      "alternatives": [
+        "WalterWhite.com",
+        "HelpWalterWhite.com",
+        "SaveWalter.com",
+        "DonateWalterWhite.com",
+        "SaveWalterWhite.com"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/26BRQaiZM0IeyoJfa/giphy.gif",
+      "title": "Qual o nome do restaurante especializado em frango frito de Gustavo Fring?",
+      "description": "Hmmm, deu fome!",
+      "answer": 0,
+      "alternatives": [
+        "Los Pollos Hermanos",
+        "Twisters",
+        "Los Chicos Hermanos",
+        "KFC",
+        "Chicken Fries"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/6T795naZ1s8GA/giphy.gif",
+      "title": "Na 3ª temporada, Gus Fring preparou um super laboratório de Metanfetamina para Walter White no subterrâneo de qual ramo de negócio?",
+      "description": "Achei fácil.",
       "answer": 1,
       "alternatives": [
-        "JSONHttpRequest",
-        "XMLHttpRequest",
-        "fetch"
+        "Alimentação",
+        "Lavanderia",
+        "Contabilidade",
+        "Frigorífico",
+        "Lava-Rápido"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/3oFzmmX8weSxudICHe/giphy.gif",
+      "title": "Qual o nome da filha de Walter e Skyler?",
+      "description": "Nem eu lembrava dessa!",
+      "answer": 2,
+      "alternatives": [
+        "Hope",
+        "Joy",
+        "Holly",
+        "Beca",
+        "Nenhuma das Alternativas"
       ]
     }
   ],
@@ -49,13 +140,13 @@
   ],
   "theme": {
     "colors": {
-      "primary": "#222222",
-      "secondary": "#e89c3f",
-      "mainBg": "#213f4e",
+      "primary": "#093009",
+      "secondary": "#b1a300",
+      "mainBg": "#09300957",
       "contrastText": "#FFFFFF",
-      "wrong": "#FF5722",
-      "success": "#4CAF50"
+      "wrong": "#582222",
+      "success": "#258025"
     },
-    "borderRadius": "4px"
+    "borderRadius": "2px"
   }
 }
