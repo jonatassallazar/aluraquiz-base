@@ -35,7 +35,43 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+          rel="stylesheet"
+        />
+        <title>Quiz Breaking Bad | #AluraQuiz</title>
+        <meta name="title" content="Quiz Breaking Bad | #AluraQuiz" />
+        <meta
+          name="description"
+          content="Faça agora o quiz e compare com seus amigos o quanto você sabe de Breaking Bad!"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://aluraquiz-imersao-cghuwxfr4.vercel.app/"
+        />
+        <meta property="og:title" content="Quiz Breaking Bad | #AluraQuiz" />
+        <meta
+          property="og:description"
+          content="Faça agora o quiz e compare com seus amigos o quanto você sabe de Breaking Bad!"
+        />
+        <meta property="og:image" content="https://images6.alphacoders.com/321/thumb-1920-321927.jpg" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://aluraquiz-imersao-cghuwxfr4.vercel.app/"
+        />
+        <meta
+          property="twitter:title"
+          content="Quiz Breaking Bad | #AluraQuiz"
+        />
+        <meta
+          property="twitter:description"
+          content="Faça agora o quiz e compare com seus amigos o quanto você sabe de Breaking Bad!"
+        />
+        <meta property="twitter:image" content="https://images6.alphacoders.com/321/thumb-1920-321927.jpg" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
