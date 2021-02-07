@@ -10,7 +10,7 @@ function ResultWidget({
   setGravadoDB,
 }) {
   function gravarPontuacao(nome, pontuacao) {
-    fire.database().ref('leaderboard/').push({
+    fire.database().ref('/leaderboard/').push({
       nome,
       pontuacao,
     });
