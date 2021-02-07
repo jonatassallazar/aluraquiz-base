@@ -24,8 +24,6 @@ export default function Home({ leaderboardScore }) {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>
-          AluraQuiz
-          -
           {db.title}
         </title>
       </Head>
