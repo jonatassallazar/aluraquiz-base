@@ -144,19 +144,21 @@ export default function Home({ leaderboardScore }) {
 
 export async function getServerSideProps() {
   try {
-    const leaderboardScore = [];
+    const scores = [];
     await fire
       .database()
       .ref('/leaderboard/')
       .once('value')
       .then((snapshot) => {
         snapshot.forEach((childSnapshot) => {
-          leaderboardScore.push({
+          scores.push({
             id: childSnapshot.key,
             ...childSnapshot.val(),
           });
         });
       });
+    
+    const leaderboardScore = scores.sort((a,b) => b.pontuacao - a.pontuacao)
     return {
       props: {
         leaderboardScore,
